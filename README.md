@@ -47,6 +47,22 @@ vermagic covers the kernel's patches as well as its config, so a folder
 only ever fits one kernel. `feeds.tsv` lists the folders kept, newest first,
 with the release each came with; the page lists them too.
 
+## Licences and source
+
+Each package keeps its own licence, which its metadata names
+(`apk info -a <package>`); most kmods are GPL-2.0-only, the Linux kernel's
+licence. Each feed's folder says where its source is, in `SOURCE.txt`:
+
+- the kernel's patches, the mt76 Wi-Fi driver fork and MilkFlint's own
+  packages are in [MilkFlint's OpenWrt tree](https://github.com/OddBlueDog/openwrt),
+  at the commit (and release tag) `SOURCE.txt` names;
+- Linux itself is kernel.org's release that tree pins;
+- OpenWrt's package feeds are at the commits in `feeds.buildinfo`.
+
+`config.buildinfo` is the build's configuration and `version.buildinfo`
+OpenWrt's revision. This repository's own files are under the GPL-2.0
+(`LICENSE`).
+
 ## How it is published
 
 The feeds are made by MilkFlint's builds, signed with MilkFlint's key, and
