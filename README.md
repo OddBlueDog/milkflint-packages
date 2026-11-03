@@ -18,7 +18,7 @@ No feeds have been published yet. The first comes with a coming release.
 ## Using it
 
 Images that have a feed here already list it in
-`/etc/apk/repositories.d/distfeeds.list` and trust its key, so installing a
+`/etc/apk/repositories.d/kmods.list` and trust its key, so installing a
 kmod works as on OpenWrt:
 
 ```sh
@@ -33,18 +33,24 @@ one that has one.
 
 ## Layout
 
+The same as downloads.openwrt.org's, one folder per kernel:
+
 ```
-<release>/<target>/<subtarget>/packages.adb   the signed index
-<release>/<target>/<subtarget>/*.apk          the kmods
+targets/<target>/<subtarget>/kmods/<kernel>/packages.adb   the signed index
+targets/<target>/<subtarget>/kmods/<kernel>/*.apk          the kmods
 ```
 
-For example `0.43a/mediatek/filogic/` serves the Flint 2 and the Zyxel
-EX5601-T0, which share a target and kernel.
+`<kernel>` is `<version>-<release>-<vermagic>`, for example
+`targets/mediatek/filogic/kmods/6.12.115-1-<hash>/`, and serves the Flint 2
+and the Zyxel EX5601-T0, which share a target and kernel. MilkFlint's
+vermagic covers the kernel's patches as well as its config, so a folder
+only ever fits one kernel. `feeds.tsv` lists the folders kept, newest first,
+with the release each came with; the page lists them too.
 
 ## How it is published
 
-The feeds are made by MilkFlint's release builds, signed with MilkFlint's
-build key, and are never edited by hand. Each publish replaces this
+The feeds are made by MilkFlint's builds, signed with MilkFlint's key, and
+are never edited by hand. Each publish replaces this
 repository's history with a single commit holding the feeds still kept, so
 the repository doesn't grow with every release; older releases' feeds may
 be removed once few routers still run them.
