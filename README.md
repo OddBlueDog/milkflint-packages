@@ -50,7 +50,7 @@ with the release each came with; the page lists them too.
 ## How it is published
 
 The feeds are made by MilkFlint's builds, signed with MilkFlint's key, and
-are never edited by hand. Each publish replaces this
-repository's history with a single commit holding the feeds still kept, so
-the repository doesn't grow with every release; older releases' feeds may
-be removed once few routers still run them.
+are never edited by hand. From time to time this repository's history is
+replaced with a single commit holding the feeds still kept, so it doesn't
+grow with every release; older releases' feeds may be removed once few
+routers still run them.
