@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MilkFlint packages</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1f2328;
+    --muted: #59636e;
+    --line: #d1d9e0;
+    --code: #f6f8fa;
+    --link: #0969da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --text: #e6edf3;
+      --muted: #9198a1;
+      --line: #3d444d;
+      --code: #151b23;
+      --link: #4493f8;
+    }
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 42rem; margin: 0 auto; padding: 3rem 1rem; }
+  header { display: flex; align-items: center; gap: 1rem; }
+  header img { width: 56px; height: 56px; }
+  h1 { font-size: 1.75rem; margin: 0; }
+  h2 { font-size: 1.15rem; margin: 2rem 0 0.5rem; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); }
+  a { color: var(--link); }
+  code, pre { font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--code); }
+  code { padding: 0.1em 0.3em; border-radius: 4px; }
+  pre { padding: 0.75rem 1rem; border: 1px solid var(--line); border-radius: 6px; overflow-x: auto; }
+  pre code { padding: 0; background: none; }
+  ul { padding-left: 1.25rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="logo.svg" alt="">
+    <h1>MilkFlint packages</h1>
+  </header>
+
+  <p>Kernel module packages (kmods) for
+  <a href="https://github.com/OddBlueDog/openwrt">MilkFlint</a>. MilkFlint
+  runs its own kernel, so OpenWrt's kmods don't install on it. Each release
+  gets a feed here, built with its images, whose kmods match its kernel
+  exactly.</p>
+
+  <h2>Installing a kmod</h2>
+  <p>Images with a feed here already list it, so on the router:</p>
+  <pre><code>apk update
+apk add kmod-usb-net-rndis</code></pre>
+  <p class="muted">A feed only fits its own release: after upgrading
+  MilkFlint, install any kmods you had added again.</p>
+
+  <h2>Feeds</h2>
+  <!-- releases: the publish script lists each release's feed here -->
+  <ul id="releases">
+    <li class="muted">None yet: the first comes with a coming release.</li>
+  </ul>
+
+  <p class="muted">Source and details:
+  <a href="https://github.com/OddBlueDog/milkflint-packages">github.com/OddBlueDog/milkflint-packages</a></p>
+</main>
+</body>
+</html>
