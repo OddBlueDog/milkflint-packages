@@ -60,8 +60,9 @@ licence. Each feed's folder says where its source is, in `SOURCE.txt`:
 - OpenWrt's package feeds are at the commits in `feeds.buildinfo`.
 
 `config.buildinfo` is the build's configuration and `version.buildinfo`
-OpenWrt's revision. This repository's own files are under the GPL-2.0
-(`LICENSE`).
+OpenWrt's revision. This repository doesn't relicense the packages; only
+its own files (this README, the page, the logo, `feeds.tsv`) are under the
+GPL-2.0. `LICENSE` says which is which.
 
 ## How it is published
 
