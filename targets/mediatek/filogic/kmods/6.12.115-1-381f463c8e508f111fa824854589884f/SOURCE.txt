@@ -1,0 +1,13 @@
+MilkFlint 0.5a
+Kernel 6.12.115~381f463c8e508f111fa824854589884f-r1
+
+These kmods were built from:
+- MilkFlint's OpenWrt tree: https://github.com/OddBlueDog/openwrt/tree/be2a90733bfe (tag milkflint-0.5a)
+  (OpenWrt with MilkFlint's kernel patches, mt76 Wi-Fi driver fork and
+  packages)
+- Linux 6.12.115 from kernel.org, as that tree pins it
+- OpenWrt's package feeds at the commits in feeds.buildinfo
+
+config.buildinfo is the build's configuration and version.buildinfo
+OpenWrt's revision. Each package's licence is in its metadata
+(apk info -a <package>); most kmods are GPL-2.0-only, the Linux kernel's.
