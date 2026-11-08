@@ -1,8 +1,8 @@
-MilkFlint 0.5a
+MilkFlint 0.52a (also 0.5a)
 Kernel 6.12.115~381f463c8e508f111fa824854589884f-r1
 
 These kmods were built from:
-- MilkFlint's OpenWrt tree: https://github.com/OddBlueDog/openwrt/tree/be2a90733bfe (tag milkflint-0.5a)
+- MilkFlint's OpenWrt tree: https://github.com/OddBlueDog/openwrt/tree/97fbec534c56 (tag milkflint-0.52a)
   (OpenWrt with MilkFlint's kernel patches, mt76 Wi-Fi driver fork and
   packages)
 - Linux 6.12.115 from kernel.org, as that tree pins it
