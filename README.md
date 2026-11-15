@@ -3,8 +3,8 @@
 # MilkFlint packages
 
 Kernel module packages (kmods) for
-[MilkFlint](https://github.com/OddBlueDog/openwrt), served with Cloudflare
-Pages.
+[MilkFlint](https://github.com/OddBlueDog/openwrt), and its AdGuard Home
+updates, served with Cloudflare Pages.
 
 MilkFlint runs its own kernel, so OpenWrt's kmod packages don't install on
 it: each kmod names the exact kernel it was built for, and `apk` refuses it
@@ -12,8 +12,6 @@ on any other. This repository holds a feed for each MilkFlint release, built
 from the same tree as that release's images, so its kmods match that
 release's kernel exactly. Everything else (programs, LuCI apps) still comes
 from OpenWrt's own feeds.
-
-No feeds have been published yet. The first comes with a coming release.
 
 ## Using it
 
@@ -47,11 +45,32 @@ vermagic covers the kernel's patches as well as its config, so a folder
 only ever fits one kernel. `feeds.tsv` lists the folders kept, newest first,
 with the release each came with; the page lists them too.
 
+## AdGuard Home
+
+Images with AdGuard Home update it from its page (Security → AdGuard
+Home), from a feed of its own, tagged `@milkflint` in apk so OpenWrt's
+`adguardhome` package never replaces it:
+
+```
+packages/aarch64_cortex-a53/milkflint/packages.adb   the signed index
+packages/aarch64_cortex-a53/milkflint/*.apk          the versions kept
+sources/adguardhome/<version>/                       a copy of each one's source
+```
+
+Its source is AdGuard's own, at each version's tag on
+[GitHub](https://github.com/AdguardTeam/AdGuardHome), built unchanged by
+`package/milkflint/adguardhome` in MilkFlint's OpenWrt tree; the Go modules
+and npm packages built into it are the ones its `go.sum` and
+`client/package-lock.json` pin. `sources/adguardhome/<version>/` keeps the
+source tarball as downloaded, the Makefile and its files, and a
+`SOURCE.txt` of hashes. MilkFlint is not made or endorsed by AdGuard;
+"AdGuard" is their trademark.
+
 ## Licences and source
 
 Each package keeps its own licence, which its metadata names
 (`apk info -a <package>`); most kmods are GPL-2.0-only, the Linux kernel's
-licence. Each feed's folder says where its source is, in `SOURCE.txt`:
+licence, and AdGuard Home is GPL-3.0-only. Each feed's folder says where its source is, in `SOURCE.txt`:
 
 - the kernel's patches, the mt76 Wi-Fi driver fork and MilkFlint's own
   packages are in [MilkFlint's OpenWrt tree](https://github.com/OddBlueDog/openwrt),

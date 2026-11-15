@@ -53,10 +53,10 @@
   </header>
 
   <p>Kernel module packages (kmods) for
-  <a href="https://github.com/OddBlueDog/openwrt">MilkFlint</a>. MilkFlint
-  runs its own kernel, so OpenWrt's kmods don't install on it. Each release
-  gets a feed here, built with its images, whose kmods match its kernel
-  exactly.</p>
+  <a href="https://github.com/OddBlueDog/openwrt">MilkFlint</a>, and its
+  AdGuard Home updates. MilkFlint runs its own kernel, so OpenWrt's kmods
+  don't install on it. Each release gets a feed here, built with its images,
+  whose kmods match its kernel exactly.</p>
 
   <h2>Installing a kmod</h2>
   <p>Images with a feed here already list it, so on the router:</p>
@@ -68,6 +68,7 @@ apk add kmod-usb-net-rndis</code></pre>
   <h2>Feeds</h2>
   <!-- releases: the publish script lists each release's feed here -->
   <ul id="releases">
+    <li><strong>MilkFlint 0.81a</strong> (2026-11-15): kernel 6.12.115, <code>targets/mediatek/filogic/kmods/6.12.115-1-b54311069083879d49cd1ee0273a4672/</code> (<a href="targets/mediatek/filogic/kmods/6.12.115-1-b54311069083879d49cd1ee0273a4672/SOURCE.txt">source</a>)</li>
     <li><strong>MilkFlint 0.7a</strong> (2026-11-14): kernel 6.12.115, <code>targets/mediatek/filogic/kmods/6.12.115-1-0d71bd23db311a96e2780051d6595d08/</code> (<a href="targets/mediatek/filogic/kmods/6.12.115-1-0d71bd23db311a96e2780051d6595d08/SOURCE.txt">source</a>)</li>
     <li><strong>MilkFlint 0.62a (also 0.61a)</strong> (2026-11-11): kernel 6.12.115, <code>targets/mediatek/filogic/kmods/6.12.115-1-b92406752b85d6539b8539e93a61c4f2/</code> (<a href="targets/mediatek/filogic/kmods/6.12.115-1-b92406752b85d6539b8539e93a61c4f2/SOURCE.txt">source</a>)</li>
     <li><strong>MilkFlint 0.52a (also 0.5a)</strong> (2026-11-08): kernel 6.12.115, <code>targets/mediatek/filogic/kmods/6.12.115-1-381f463c8e508f111fa824854589884f/</code> (<a href="targets/mediatek/filogic/kmods/6.12.115-1-381f463c8e508f111fa824854589884f/SOURCE.txt">source</a>)</li>
@@ -75,9 +76,21 @@ apk add kmod-usb-net-rndis</code></pre>
     <li><strong>MilkFlint 0.42a test build (main)</strong> (2026-11-03): kernel 6.12.115, <code>targets/mediatek/filogic/kmods/6.12.115-1-302aeb04824ddd77c1d9fcf4b96728cd/</code> (<a href="targets/mediatek/filogic/kmods/6.12.115-1-302aeb04824ddd77c1d9fcf4b96728cd/SOURCE.txt">source</a>)</li>
   </ul>
 
+  <h2>AdGuard Home</h2>
+  <p>Images with AdGuard Home update it from its page (Security → AdGuard
+  Home), from the feed in <code>packages/aarch64_cortex-a53/milkflint/</code>.
+  Its source is AdGuard's own, at each version's tag on
+  <a href="https://github.com/AdguardTeam/AdGuardHome">GitHub</a>, built
+  unchanged by <code>package/milkflint/adguardhome</code> in MilkFlint's
+  OpenWrt tree. A copy of each version's source tarball and Makefile is
+  kept here, in <code>sources/adguardhome/&lt;version&gt;/</code>, with a
+  <code>SOURCE.txt</code>. MilkFlint is not made or endorsed by AdGuard;
+  “AdGuard” is their trademark.</p>
+
   <h2>Licences and source</h2>
   <p>Each package keeps its own licence (<code>apk info -a &lt;package&gt;</code>);
-  most kmods are GPL-2.0-only, the Linux kernel's. Each feed's
+  most kmods are GPL-2.0-only, the Linux kernel's, and AdGuard Home is
+  GPL-3.0-only. Each feed's
   <code>SOURCE.txt</code> says where its source is:
   <a href="https://github.com/OddBlueDog/openwrt">MilkFlint's OpenWrt tree</a>
   at the commit it was built from, and OpenWrt's feeds at the commits in its

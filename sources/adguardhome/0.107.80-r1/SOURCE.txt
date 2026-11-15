@@ -1,0 +1,18 @@
+adguardhome 0.107.80-r1: its source
+
+https://github.com/AdguardTeam/AdGuardHome/tree/v0.107.80
+    the source, upstream's own, at the tag this package is built from,
+    unchanged; the Go modules and npm packages built into it are the ones
+    its go.sum and client/package-lock.json pin
+https://github.com/OddBlueDog/openwrt (package/milkflint/adguardhome)
+    how MilkFlint builds and installs it with OpenWrt's build system: the
+    Makefile and files/ here, at the MilkFlint release that ships it
+
+A copy of each is kept here:
+adguardhome-0.107.80.tar.gz
+    the source tarball as downloaded; sha256 c67cf289f1d4b05c78994f4d1d169962540814a212244eb191cd599795d90278
+    (the hash the Makefile pins: PKG_HASH)
+Makefile, files/
+
+The package: packages/aarch64_cortex-a53/milkflint/adguardhome-0.107.80-r1.apk, sha256
+ea222311bd5cfe19872de232080f102e57c8820daf0b69fb4fd12313f29f686a
