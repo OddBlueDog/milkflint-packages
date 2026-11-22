@@ -57,14 +57,13 @@ packages/aarch64_cortex-a53/milkflint/*.apk          the versions kept
 sources/adguardhome/<version>/                       a copy of each one's source
 ```
 
-Its source is AdGuard's own, at each version's tag on
-[GitHub](https://github.com/AdguardTeam/AdGuardHome), built unchanged by
-`package/milkflint/adguardhome` in MilkFlint's OpenWrt tree; the Go modules
-and npm packages built into it are the ones its `go.sum` and
-`client/package-lock.json` pin. `sources/adguardhome/<version>/` keeps the
-source tarball as downloaded, the Makefile and its files, and a
-`SOURCE.txt` of hashes. MilkFlint is not made or endorsed by AdGuard;
-"AdGuard" is their trademark.
+Recent versions package AdGuard's official Linux arm64 release unchanged via
+`package/milkflint/adguardhome` in MilkFlint's OpenWrt tree (earlier versions
+were built from source); its source is AdGuard's own, at each version's tag
+on [GitHub](https://github.com/AdguardTeam/AdGuardHome).
+`sources/adguardhome/<version>/` keeps the release tarball, matching upstream
+source tarball, Makefile and its files, and a `SOURCE.txt` of hashes.
+MilkFlint is not made or endorsed by AdGuard; "AdGuard" is their trademark.
 
 ## Licences and source
 

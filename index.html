@@ -80,13 +80,19 @@ apk add kmod-usb-net-rndis</code></pre>
   <h2>AdGuard Home</h2>
   <p>Images with AdGuard Home update it from its page (Security → AdGuard
   Home), from the feed in <code>packages/aarch64_cortex-a53/milkflint/</code>.
-  Its source is AdGuard's own, at each version's tag on
-  <a href="https://github.com/AdguardTeam/AdGuardHome">GitHub</a>, built
-  unchanged by <code>package/milkflint/adguardhome</code> in MilkFlint's
-  OpenWrt tree. A copy of each version's source tarball and Makefile is
-  kept here, in <code>sources/adguardhome/&lt;version&gt;/</code>, with a
-  <code>SOURCE.txt</code>. MilkFlint is not made or endorsed by AdGuard;
-  “AdGuard” is their trademark.</p>
+  It packages AdGuard's official Linux arm64 release unchanged via
+  <code>package/milkflint/adguardhome</code> in MilkFlint's OpenWrt tree; its
+  source is AdGuard's own, at each version's tag on
+  <a href="https://github.com/AdguardTeam/AdGuardHome">GitHub</a>. A copy of
+  each version's release tarball, matching upstream source tarball and
+  Makefile is kept here, in <code>sources/adguardhome/&lt;version&gt;/</code>,
+  with a <code>SOURCE.txt</code>. MilkFlint is not made or endorsed by
+  AdGuard; “AdGuard” is their trademark.</p>
+  <!-- packages: the publish script lists each package version here -->
+  <ul id="packages">
+    <li><strong>AdGuard Home 1.0.0-r1</strong>: <code>packages/aarch64_cortex-a53/milkflint/adguardhome-1.0.0-r1.apk</code> (<a href="sources/adguardhome/1.0.0-r1/SOURCE.txt">source</a>)</li>
+    <li><strong>AdGuard Home 0.107.80-r1</strong>: <code>packages/aarch64_cortex-a53/milkflint/adguardhome-0.107.80-r1.apk</code> (<a href="sources/adguardhome/0.107.80-r1/SOURCE.txt">source</a>)</li>
+  </ul>
 
   <h2>Licences and source</h2>
   <p>Each package keeps its own licence (<code>apk info -a &lt;package&gt;</code>);
