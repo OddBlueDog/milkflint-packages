@@ -1,0 +1,21 @@
+adguardhome 1.0.0-r1001: its release and source
+
+https://github.com/AdguardTeam/AdGuardHome/releases/tag/v1.0.0
+    the official Linux arm64 release packaged unchanged (adguardhome-1.0.0-linux-arm64.tar.gz,
+    sha256 f5c331d29580726179d3119c0464ddacd6fdcd487a0a9e108532f58fdf772604, the hash the Makefile pins: PKG_HASH)
+https://github.com/AdguardTeam/AdGuardHome/tree/v1.0.0
+    the matching upstream GPL-3.0 source at the tag this release was built from
+https://github.com/OddBlueDog/openwrt (package/milkflint/adguardhome)
+    how MilkFlint packages and installs it with OpenWrt's build system: the
+    Makefile and files/ here, at the MilkFlint release that ships it
+
+A copy of each is kept here:
+adguardhome-1.0.0-linux-arm64.tar.gz
+    the official release tarball as downloaded; sha256 f5c331d29580726179d3119c0464ddacd6fdcd487a0a9e108532f58fdf772604
+adguardhome-1.0.0-source.tar.gz
+    the source at v1.0.0, as https://github.com/AdguardTeam/AdGuardHome/archive/refs/tags/v1.0.0.tar.gz
+    served it when this version was added; sha256 fb7b67a40bcd81063cf0f7fbc5c27cd5ae71cc6434a4b5342885ebb3e51586d6
+Makefile, files/
+
+The package: packages/aarch64_cortex-a53/milkflint/adguardhome-1.0.0-r1001.apk, sha256
+3e86405845145fe2c1b81d5656b9365afce57974331f60301fc414feafeb52e9
