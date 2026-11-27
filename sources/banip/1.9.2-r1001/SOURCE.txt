@@ -1,0 +1,13 @@
+banip 1.9.2-r1001: its source
+
+https://github.com/openwrt/packages/tree/ccb56eff0a2e/net/banip
+    upstream's own files at the openwrt/packages commit this version is
+    built from, unchanged (the -r number after the version is MilkFlint's own
+    build number, not upstream's)
+
+A copy is kept here: Makefile and files/ are MilkFlint's override folder,
+the files that build the package with OpenWrt's build system
+(https://github.com/OddBlueDog/openwrt, package/milkflint/banip).
+
+The package: packages/aarch64_cortex-a53/milkflint/banip-1.9.2-r1001.apk, sha256
+78561602e3081773a57b8a32f86e7e010b070eb6bfcc5d84be2c258a5669a005
